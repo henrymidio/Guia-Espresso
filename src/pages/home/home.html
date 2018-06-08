@@ -1,11 +1,10 @@
-
-<ion-header no-border>
+<ion-header>
   <ion-toolbar color="primary">
     <ion-searchbar placeholder="Guia Espresso" mode="md"></ion-searchbar>
   </ion-toolbar>
 
-  <ion-toolbar color="primary" mode="md" no-border>
-    <ion-segment mode="md">
+  <ion-toolbar color="primary" mode="md" no-border no-padding>
+    <ion-segment [(ngModel)]="display" mode="md">
       <ion-segment-button value="mapa">
         <ion-title mode="md">MAPA</ion-title>
       </ion-segment-button>
@@ -14,8 +13,70 @@
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
+
 </ion-header>
 
-<ion-content style="background-image: url(http://vadebike.org/wp-content/uploads/2015/03/ciclovias-sao-paulo-google-maps-2a-Imagem-Gabriel-Tavano-Cruz.jpg)">  
-  
+<ion-content>
+  <div [style.display]="display == 'mapa' ? 'block' : 'none'" style="width: 100%; height: 100%">
+    <div #map id="map"></div>
+  </div>
+  <div [ngSwitch]="display">
+    <div *ngSwitchCase="'mapa'">
+      <ion-footer no-padding no-margin>
+        <ion-list *ngIf="displayFooter" inset>
+          <ion-item on-tap="openCafeteriaPage()">
+            <ion-thumbnail item-start>
+              <img src="https://scontent.cdninstagram.com/vp/f1772083299a506abd72761ae83c0a07/5BB4082D/t51.2885-15/s320x320/e35/29738641_190320074914718_6033303855347793920_n.jpg">
+            </ion-thumbnail>
+            <h2>My Neighbor Totoro</h2>
+            <p>Hayao Miyazaki • 1988</p>
+            <button ion-button clear item-end>Ver</button>
+          </ion-item>
+        </ion-list>
+      </ion-footer>
+    </div>
+
+    <div *ngSwitchCase="'lista'">
+      <ion-list>
+        <ion-item no-lines mode="md">
+          <ion-thumbnail item-start>
+            <img src="https://scontent.cdninstagram.com/vp/f1772083299a506abd72761ae83c0a07/5BB4082D/t51.2885-15/s320x320/e35/29738641_190320074914718_6033303855347793920_n.jpg">
+          </ion-thumbnail>
+          <h2>My Neighbor Totoro</h2>
+          <p>Hayao Miyazaki • 1988</p>
+          <button ion-button clear item-end>15 km</button>
+        </ion-item>
+        <ion-item no-lines mode="md">
+          <ion-thumbnail item-start>
+            <img src="https://scontent.cdninstagram.com/vp/f1772083299a506abd72761ae83c0a07/5BB4082D/t51.2885-15/s320x320/e35/29738641_190320074914718_6033303855347793920_n.jpg">
+          </ion-thumbnail>
+          <h2>My Neighbor Totoro</h2>
+          <p>Hayao Miyazaki • 1988</p>
+          <button ion-button clear item-end>15 km</button>
+        </ion-item>
+        <ion-item no-lines mode="md">
+          <ion-thumbnail item-start>
+            <img src="https://scontent.cdninstagram.com/vp/f1772083299a506abd72761ae83c0a07/5BB4082D/t51.2885-15/s320x320/e35/29738641_190320074914718_6033303855347793920_n.jpg">
+          </ion-thumbnail>
+          <h2>My Neighbor Totoro</h2>
+          <p>Hayao Miyazaki • 1988</p>
+          <button ion-button clear item-end>15 km</button>
+        </ion-item>
+        <ion-item no-lines mode="md">
+          <ion-thumbnail item-start>
+            <img src="https://scontent.cdninstagram.com/vp/f1772083299a506abd72761ae83c0a07/5BB4082D/t51.2885-15/s320x320/e35/29738641_190320074914718_6033303855347793920_n.jpg">
+          </ion-thumbnail>
+          <h2>My Neighbor Totoro</h2>
+          <p>Hayao Miyazaki • 1988</p>
+          <button ion-button clear item-end>15 km</button>
+        </ion-item>
+
+        <ion-fab right bottom>
+          <button ion-fab>
+            <ion-icon name="ios-funnel"></ion-icon>
+          </button>
+        </ion-fab>
+      </ion-list>
+    </div>
+  </div>
 </ion-content>

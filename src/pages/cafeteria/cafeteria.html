@@ -1,0 +1,86 @@
+<ion-content style="height: 100vh">
+  <div class="cafeteria-capa over-shadow" [ngStyle]="{'background-image': 'url(https://scontent.cdninstagram.com/vp/f1772083299a506abd72761ae83c0a07/5BB4082D/t51.2885-15/s320x320/e35/29738641_190320074914718_6033303855347793920_n.jpg)'}">
+    <button class="botao-flutuante" ion-button icon-only clear color="light" (click)="voltarPagina()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+  </div>
+
+  <div class="conteudo">
+    <div class="principal" padding>
+      <h1>Suplicy Cafés</h1>
+      <div class="avaliacao">
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        5.0
+      </div>
+      <p>Alameda Lorena, 1430 - Jardins</p>
+    </div>
+
+    <div class="oferecimento" padding>
+      <h1>Oferece</h1>
+      <div>
+        <ion-icon name="wifi"></ion-icon>
+        <ion-icon name="cafe"></ion-icon>
+        <ion-icon name="bicycle"></ion-icon>
+        <ion-icon name="car"></ion-icon>
+        <ion-icon name="cafe"></ion-icon>
+      </div>
+    </div>
+
+    <div class="descricao" padding>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+        eaque ipsa quae ab illo inventore veritatis </p>
+    </div>
+
+    <div class="comentarios">
+      <h1 padding-left padding-right padding-top>Avaliações</h1>
+      <ion-slides pager="true">
+        <ion-slide>
+          <ion-card>
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="https://ionicframework.com/dist/preview-app/www/assets/img/marty-avatar.png">
+              </ion-avatar>
+              <h2>Marty McFly</h2>
+              <div class="avaliacao">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+            </ion-item>
+            <ion-card-content>
+              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
+                Whoa. This is heavy.</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+            <ion-card>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="https://ionicframework.com/dist/preview-app/www/assets/img/marty-avatar.png">
+                </ion-avatar>
+                <h2>Marty McFly</h2>
+                <div class="avaliacao">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+              </ion-item>
+              <ion-card-content>
+                <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
+                  Whoa. This is heavy.</p>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+</ion-content>
