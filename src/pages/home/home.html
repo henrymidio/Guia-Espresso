@@ -1,14 +1,21 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+
+<ion-header no-border>
+  <ion-toolbar color="primary">
+    <ion-searchbar placeholder="Guia Espresso" mode="md"></ion-searchbar>
+  </ion-toolbar>
+
+  <ion-toolbar color="primary" mode="md" no-border>
+    <ion-segment mode="md">
+      <ion-segment-button value="mapa">
+        <ion-title mode="md">MAPA</ion-title>
+      </ion-segment-button>
+      <ion-segment-button value="lista">
+        <ion-title mode="md">LISTA</ion-title>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content style="background-image: url(http://vadebike.org/wp-content/uploads/2015/03/ciclovias-sao-paulo-google-maps-2a-Imagem-Gabriel-Tavano-Cruz.jpg)">  
+  
 </ion-content>
