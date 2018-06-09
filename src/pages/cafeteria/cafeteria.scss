@@ -1,9 +1,10 @@
 page-cafeteria {
     .cafeteria-capa {
         height: 40vh;
-        position: fixed;
+        //position: fixed;
         width: 100%;
         background-size: cover;
+        z-index: 1;
     }
 
     .over-shadow:before {

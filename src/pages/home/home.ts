@@ -59,7 +59,7 @@ export class HomePage implements OnInit{
     });
    
     google.maps.event.addListener(marker, 'click', () => {
-      infoWindow.open(this.map, marker);
+      //infoWindow.open(this.map, marker);
       this.zone.run(()=>{this.displayFooter = true;})
     });
    
