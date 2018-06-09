@@ -69,4 +69,8 @@ export class HomePage implements OnInit{
     this.navCtrl.push('CafeteriaPage')
   }
 
+  closeThumbnail() {
+    this.displayFooter = false;
+  }
+
 }

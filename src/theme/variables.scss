@@ -34,11 +34,11 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #4B3621,
-  secondary:  #32db64,
+  primary:    #693d29,
+  secondary:  white,
   danger:     #f53d3d,
   light:      white,
-  dark:       #222
+  dark:       #693d29
 );
 
 
@@ -46,13 +46,17 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-
+$searchbar-ios-input-background-color: rgba(120, 85, 73, 0.8);
+$searchbar-ios-input-placeholder-color: rgba(255, 255, 255, 0.5);
+$searchbar-ios-input-text-color: #fff;
+$searchbar-ios-input-search-icon-color: rgba(255, 255, 255, 0.5);
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
-$segment-button-md-border-color-activated: white;
+$segment-button-md-border-color-activated: #4B3621;
+$searchbar-md-input-background-color: rgba(120, 85, 73, 0.8);
 
 // App Windows Variables
 // --------------------------------------------------

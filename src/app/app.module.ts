@@ -1,4 +1,5 @@
-import { ComponentsModule } from './../components/components.module';
+import { ListaCafeteriasPage } from './../pages/lista-cafeterias/lista-cafeterias';
+import { TabsPage } from './../pages/tabs/tabs';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -11,17 +12,22 @@ import { HomePage } from '../pages/home/home';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    ListaCafeteriasPage,
+    TabsPage
   ],
   imports: [
-    ComponentsModule,
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      tabsHideOnSubPages: true
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    ListaCafeteriasPage,
+    TabsPage
   ],
   providers: [
     StatusBar,
