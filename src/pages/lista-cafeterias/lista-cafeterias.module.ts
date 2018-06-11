@@ -1,10 +1,11 @@
+
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { ListaCafeteriasPage } from './lista-cafeterias';
 
 @NgModule({
   declarations: [
-    ListaCafeteriasPage,
+    ListaCafeteriasPage
   ],
   imports: [
     IonicPageModule.forChild(ListaCafeteriasPage),

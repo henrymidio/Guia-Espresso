@@ -1,18 +1,81 @@
-<!--
-  Generated template for the FilterPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Filter</ion-title>
+  <ion-navbar color="primary">
+
+    <ion-buttons left>
+      <button ion-button icon-only (click)="viewCtrl.dismiss()" class="my-style-for-modal">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title mode="ios">Filtro</ion-title>
+
+    <ion-buttons right>
+        <button ion-button icon-only class="my-style-for-modal">
+          <ion-icon name="md-checkmark"></ion-icon>
+        </button>
+      </ion-buttons>
+
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+
+  <div class="range" padding-top>
+    <ion-list no-border no-lines>
+      <ion-list-header no-border no-lines>
+          <h2 padding-right style="font-weight: 900">Distância</h2>
+        <ion-badge item-end>{{singleValue}} km</ion-badge>
+      </ion-list-header>
+      <ion-item>
+        <ion-range min="1" max="10" [(ngModel)]="singleValue" color="dark">
+          <ion-label range-left>1</ion-label>
+          <ion-label range-right>10</ion-label>
+        </ion-range>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div class="oferecimento">
+    <h2 padding-left padding-right>Espaço</h2>
+    <div class="chips" padding>
+      <ion-chip>
+        <ion-label>Wifi</ion-label>
+      </ion-chip>
+      <ion-chip>
+        <ion-label>Pet friendly</ion-label>
+      </ion-chip>
+      <ion-chip>
+        <ion-label>Terraço</ion-label>
+      </ion-chip>
+      <ion-chip>
+        <ion-label>Álcool</ion-label>
+      </ion-chip>
+      <ion-chip>
+        <ion-label>Kids</ion-label>
+      </ion-chip>
+      <ion-chip>
+        <ion-label>Cursos</ion-label>
+      </ion-chip>
+    </div>
+
+    <div class="cidades">
+      <h2 padding-left padding-right>Região</h2>
+      <ion-list mode="md">
+        <ion-item mode="md">
+          <ion-label mode="md">São Paulo</ion-label>
+          <ion-checkbox mode="md" [(ngModel)]="pepperoni"></ion-checkbox>
+        </ion-item>
+
+        <ion-item mode="md">
+          <ion-label mode="md">Rio de Janeiro</ion-label>
+          <ion-checkbox mode="md" [(ngModel)]="sausage"></ion-checkbox>
+        </ion-item>
+
+      </ion-list>
+    </div>
+  </div>
 
 </ion-content>

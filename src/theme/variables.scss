@@ -38,7 +38,7 @@ $colors: (
   secondary:  white,
   danger:     #f53d3d,
   light:      white,
-  dark:       #693d29
+  dark:       #000
 );
 
 
@@ -46,17 +46,18 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-$searchbar-ios-input-background-color: rgba(120, 85, 73, 0.8);
-$searchbar-ios-input-placeholder-color: rgba(255, 255, 255, 0.5);
-$searchbar-ios-input-text-color: #fff;
-$searchbar-ios-input-search-icon-color: rgba(255, 255, 255, 0.5);
+
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
 $segment-button-md-border-color-activated: #4B3621;
-$searchbar-md-input-background-color: rgba(120, 85, 73, 0.8);
+$searchbar-md-input-background-color: white;
+$searchbar-md-input-placeholder-color: #bbb;
+$searchbar-md-input-text-color: black;
+$searchbar-md-input-search-icon-color: #bbb;
+$range-md-tick-active-background-color: #693d29;
 
 // App Windows Variables
 // --------------------------------------------------

@@ -1,25 +1,27 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the ListaCafeteriasPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Component, OnInit } from '@angular/core';
+import { IonicPage, NavController, ModalController, Content } from 'ionic-angular';
 
 @IonicPage()
 @Component({
   selector: 'page-lista-cafeterias',
   templateUrl: 'lista-cafeterias.html',
 })
-export class ListaCafeteriasPage {
+export class ListaCafeteriasPage implements OnInit {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public modalCtrl: ModalController
+  ) {
+ 
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ListaCafeteriasPage');
+  ngOnInit(): void {
+    
+  }
+
+  presentModalFilter() {
+    const modal = this.modalCtrl.create('FilterPage');
+    modal.present();
   }
 
 }

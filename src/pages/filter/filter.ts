@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the FilterPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -15,7 +8,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FilterPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  singleValue: number = 10;
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public viewCtrl: ViewController
+  ) {
   }
 
   ionViewDidLoad() {

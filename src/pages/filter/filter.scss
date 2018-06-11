@@ -1,3 +1,29 @@
 page-filter {
+    ion-buttons button[icon-only].my-style-for-modal {
+        margin: 0 6px;
+        min-width: 36px;
+     }
+
+     .item-ios {
+         padding-left: 0;
+         padding-right: 0;
+     }
+
+     h2 {
+        font-weight: 900;
+    }
+
+    .item-md h2 {
+        font-size: 2.4rem;
+    color: black;
+    }
+
+    .range .range-knob {
+        background: #693d29;
+    }
+
+    .toolbar-title-ios {
+        color: white;
+    }
 
 }

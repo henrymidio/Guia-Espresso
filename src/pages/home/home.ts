@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild, OnInit, NgZone } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
 
 declare var google;
 
@@ -14,7 +14,11 @@ export class HomePage implements OnInit{
   display: string = "mapa";
   displayFooter: boolean = false;
  
-  constructor(public navCtrl: NavController, public zone: NgZone) {
+  constructor(
+    public navCtrl: NavController, 
+    public modalCtrl: ModalController,
+    public zone: NgZone
+  ) {
  
   }
 
@@ -63,6 +67,11 @@ export class HomePage implements OnInit{
       this.zone.run(()=>{this.displayFooter = true;})
     });
    
+  }
+
+  presentModalFilter() {
+    const modal = this.modalCtrl.create('FilterPage');
+    modal.present();
   }
 
   openCafeteriaPage() {
