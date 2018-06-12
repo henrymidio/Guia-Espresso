@@ -11,6 +11,7 @@ import { CafeteriasProvider } from '../../providers/cafeterias/cafeterias';
 export class ListaCafeteriasPage implements OnInit {
 
   cafeterias: Cafeteria[] = [];
+  
 
   constructor(
     public navCtrl: NavController, 
@@ -39,6 +40,19 @@ export class ListaCafeteriasPage implements OnInit {
 
   openCafeteriaPage(cafeteria) {
     this.navCtrl.push('CafeteriaPage', { cafeteria: cafeteria })
+  }
+
+  getItems(ev: any) {
+    let val = ev.target.value;
+
+    if (val && val.trim() != '') {
+      this.cafeterias = this.cafeterias.filter((item) => {
+        return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    } else {
+      this.cafeterias = this.cafeteriasService.cafeterias;
+      
+    }
   }
 
 }

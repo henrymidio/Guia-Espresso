@@ -1,0 +1,13 @@
+<ion-header no-border>
+  <ion-navbar color="primary" mode="md">
+    <ion-toolbar color="primary" on-tap="onSearchFocus()">
+      <ion-searchbar placeholder="Guia Espresso"></ion-searchbar>
+    </ion-toolbar>
+
+    <ion-buttons end>
+      <button ion-button icon-only mode="md" (click)="presentModalFilter()">
+        <ion-icon name="ios-funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>

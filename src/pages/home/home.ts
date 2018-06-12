@@ -13,13 +13,11 @@ export class HomePage implements OnInit {
 
   @ViewChild('map') mapElement: ElementRef;
   map: any;
-  display: string = "mapa";
   displayFooter: boolean = false;
+  displayList: boolean = false;
+  searchbarFocus: boolean = false;
 
   coffeeStore: Cafeteria;
-  csImage: string = "";
-  csName: string = "";
-  csAddress: string = "";
 
   cafeterias: Cafeteria[] = [];
 
@@ -37,6 +35,17 @@ export class HomePage implements OnInit {
     this.loadMap();
   }
 
+  hideMap(bool) {
+    const wrapper: any = document.getElementById("map-wrapper");
+    if(bool) {
+      wrapper.style.display = "none";
+      this.displayList = true;
+    } else {
+      this.displayList = false;
+      wrapper.style.display = "block";
+    }
+  }
+
   loadCafeterias() {
     this.cafeteriasService.clear()
     this.cafeteriasService.getCafeterias().subscribe((res: any) => {
@@ -49,6 +58,14 @@ export class HomePage implements OnInit {
       });
     })
 
+  }
+
+  updateLocationMap(lat, lng, cafeteria) {
+    this.hideMap(false)
+    this.map.setCenter(new google.maps.LatLng(lat, lng))
+    this.map.setZoom(18);
+    this.coffeeStore = cafeteria;
+    this.displayFooter = true;
   }
 
   loadMap() {
@@ -90,13 +107,8 @@ export class HomePage implements OnInit {
     google.maps.event.addListener(marker, 'click', () => {
       this.coffeeStore = cafeteria;
 
-      this.csAddress = cafeteria.street + ', ' + cafeteria.num;
-      this.csImage = cafeteria.cover;
-      this.csName = cafeteria.name;
-
       //Exibe o box da cafeteria
       this.zone.run(() => { this.displayFooter = true; })
-
     });
 
   }
@@ -108,11 +120,16 @@ export class HomePage implements OnInit {
 
   openCafeteriaPage() {
     this.navCtrl.push('CafeteriaPage', { cafeteria: this.coffeeStore })
-    this.closeThumbnail()
   }
 
   closeThumbnail() {
     this.displayFooter = false;
+  }
+
+  onSearchFocus(bool) {
+    //this.navCtrl.parent.select(1);
+    this.displayFooter = false;
+    this.hideMap(bool)
   }
 
 }

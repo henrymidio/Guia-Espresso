@@ -1,3 +1,4 @@
+import { ComponentsModule } from './../components/components.module';
 import { FavoritosPage } from './../pages/favoritos/favoritos';
 
 

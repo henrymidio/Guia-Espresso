@@ -1,7 +1,7 @@
 <ion-header no-border>
     <ion-navbar color="primary" mode="md">
       <ion-toolbar color="primary">
-        <ion-searchbar placeholder="Guia Espresso"></ion-searchbar>
+        <ion-searchbar placeholder="Guia Espresso" (ionInput)="getItems($event)" showCancelButton="true"></ion-searchbar>
       </ion-toolbar>
   
       <ion-buttons end>
