@@ -7,12 +7,12 @@
         <ion-icon name="arrow-back"></ion-icon>
       </button>
 
-    <div ion-fixed class="cafeteria-capa over-shadow" [ngStyle]="{'background-image': 'url(https://scontent.cdninstagram.com/vp/f1772083299a506abd72761ae83c0a07/5BB4082D/t51.2885-15/s320x320/e35/29738641_190320074914718_6033303855347793920_n.jpg)'}">
+    <div ion-fixed class="cafeteria-capa over-shadow" [ngStyle]="{'background-image': 'url(' + cafeteria.cover + ')'}">
     </div>
       
     <div class="conteudo">
       <div class="principal" padding>
-        <h1>Suplicy Cafés</h1>
+        <h1>{{ cafeteria.name }}</h1>
         <div class="avaliacao">
           <ion-icon name="star"></ion-icon>
           <ion-icon name="star"></ion-icon>
@@ -21,7 +21,7 @@
           <ion-icon name="star"></ion-icon>
           (0)
         </div>
-        <p>Alameda Lorena, 1430 - Jardins</p>
+        <p>{{ cafeteria.street }}, {{ cafeteria.num }} - {{ cafeteria.bairro }}</p>
       </div>
   
       <div class="oferecimento" padding>
@@ -36,8 +36,7 @@
       </div>
   
       <div class="descricao" padding>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-          eaque ipsa quae ab illo inventore veritatis </p>
+        <p>{{ cafeteria.description }}</p>
       </div>
   
       <div class="comentarios">

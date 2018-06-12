@@ -21,9 +21,9 @@
     <ion-list *ngIf="displayFooter" inset>
       <ion-item mode="md">
         <ion-thumbnail item-start on-tap="openCafeteriaPage()">
-          <img src="https://scontent.cdninstagram.com/vp/f1772083299a506abd72761ae83c0a07/5BB4082D/t51.2885-15/s320x320/e35/29738641_190320074914718_6033303855347793920_n.jpg">
+          <img [src]="csImage">
         </ion-thumbnail>
-        <h2 on-tap="openCafeteriaPage()">Starbucks</h2>
+        <h2 on-tap="openCafeteriaPage()">{{ csName }}</h2>
         <div class="avaliacao" on-tap="openCafeteriaPage()">
           <ion-icon name="star"></ion-icon>
           <ion-icon name="star"></ion-icon>
@@ -32,7 +32,7 @@
           <ion-icon name="star"></ion-icon>
           (0)
         </div>
-        <p>Av. Paulista 3467</p>
+        <p>{{ csAddress }}</p>
         <button ion-button clear item-end icon-only (click)="closeThumbnail()">
           <ion-icon name="md-close"></ion-icon>
         </button>
