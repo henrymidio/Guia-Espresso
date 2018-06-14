@@ -1,16 +1,23 @@
 <ion-header no-border>
   <ion-navbar color="primary" mode="md">
+    <ion-buttons start>
+      <button ion-button icon-only mode="md">
+
+      </button>
+    </ion-buttons>
+
     <ion-toolbar color="primary">
-      <ion-searchbar placeholder="Guia Espresso" showCancelButton="true" (ionFocus)="onSearchFocus(true)" (ionCancel)="onSearchFocus(false)"></ion-searchbar>
+      <ion-searchbar placeholder="Guia Espresso" animated="true" (ionInput)="onSearchInput($event)"></ion-searchbar>
     </ion-toolbar>
 
     <ion-buttons end>
-      <button ion-button icon-only mode="md" (click)="presentModalFilter()">
-        <ion-icon name="ios-funnel"></ion-icon>
+      <button ion-button (click)="presentModalFilter()" color="light">
+        <ion-icon name="funnel"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
+
 <ion-content>
 
   <ion-list *ngIf="displayList">

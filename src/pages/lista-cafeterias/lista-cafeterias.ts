@@ -11,7 +11,6 @@ import { CafeteriasProvider } from '../../providers/cafeterias/cafeterias';
 export class ListaCafeteriasPage implements OnInit {
 
   cafeterias: Cafeteria[] = [];
-  
 
   constructor(
     public navCtrl: NavController, 

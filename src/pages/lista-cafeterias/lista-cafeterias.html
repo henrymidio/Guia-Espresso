@@ -1,20 +1,26 @@
 <ion-header no-border>
-    <ion-navbar color="primary" mode="md">
-      <ion-toolbar color="primary">
-        <ion-searchbar placeholder="Guia Espresso" (ionInput)="getItems($event)" showCancelButton="true"></ion-searchbar>
-      </ion-toolbar>
-  
-      <ion-buttons end>
-        <button ion-button icon-only mode="md" (click)="presentModalFilter()">
-          <ion-icon name="ios-funnel"></ion-icon>
-        </button>
-      </ion-buttons>
-    </ion-navbar>
-  </ion-header>
+  <ion-navbar color="primary" mode="md">
+    <ion-buttons start>
+      <button ion-button icon-only mode="md">
+
+      </button>
+    </ion-buttons>
+
+    <ion-toolbar color="primary">
+      <ion-searchbar placeholder="Guia Espresso" animated="true" (ionInput)="getItems($event)"></ion-searchbar>
+    </ion-toolbar>
+
+    <ion-buttons end>
+      <button ion-button (click)="presentModalFilter()" color="light">
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item no-lines *ngFor="let cafeteria of cafeterias" on-tap="openCafeteriaPage(cafeteria)">
+    <ion-item mode="md" no-lines *ngFor="let cafeteria of cafeterias" on-tap="openCafeteriaPage(cafeteria)">
       <ion-thumbnail item-start>
         <img [src]="cafeteria.cover">
       </ion-thumbnail>

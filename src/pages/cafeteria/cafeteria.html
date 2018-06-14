@@ -4,7 +4,7 @@
 <ion-content style="height: 100vh">
 
     <button ion-fixed class="botao-flutuante" ion-button icon-only clear color="light" (click)="voltarPagina()">
-        <ion-icon name="arrow-back"></ion-icon>
+        <ion-icon name="md-arrow-back"></ion-icon>
       </button>
 
     <div ion-fixed class="cafeteria-capa over-shadow" [ngStyle]="{'background-image': 'url(' + cafeteria.cover + ')'}">
@@ -32,7 +32,6 @@
           <ion-icon name="bicycle"></ion-icon>
           <ion-icon name="car"></ion-icon>
           <ion-icon name="paw"></ion-icon>
-          <ion-icon name="restaurant"></ion-icon>
         </div>
       </div>
   
@@ -42,7 +41,7 @@
 
       <div class="contato" padding-left padding-right>
         <h1>Contato</h1>
-        <ion-list>
+        <ion-list no-lines no-border>
           <ion-item style="padding-left: 0px">
             <ion-avatar item-start>
               <img src="http://download.seaicons.com/download/i78241/igh0zt/ios7-style-metro-ui/igh0zt-ios7-style-metro-ui-metroui-other-phone-alt.ico">

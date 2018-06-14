@@ -26,4 +26,23 @@ page-filter {
         color: white;
     }
 
+    .chip-ios {
+        background-attachment: red;
+    }
+
+    .option-chip-disabled {
+        border-radius: 12px;
+        background: white;
+        border: 1px solid rgba(0,0,0,0.87);
+        margin: 5px;
+    }
+
+    .option-chip-active {
+        border-radius: 12px;
+        background: #693d29;
+        color: white;
+        border: 1px solid #693d29;
+        margin: 5px;
+    }
+
 }

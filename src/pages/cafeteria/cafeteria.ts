@@ -13,7 +13,7 @@ export class CafeteriaPage implements OnInit {
   cafeteria: Cafeteria;
 
   constructor(public navCtrl: NavController, public statusBar: StatusBar, public navParams: NavParams) {
-    statusBar.hide();
+    //statusBar.hide();
   }
 
   ngOnInit(): void {
@@ -22,7 +22,7 @@ export class CafeteriaPage implements OnInit {
   }
 
   ionViewWillLeave() {
-    this.statusBar.show()
+    //this.statusBar.show()
   }
 
   voltarPagina() {

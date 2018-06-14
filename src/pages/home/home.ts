@@ -99,11 +99,11 @@ export class HomePage implements OnInit {
   }
 
   addInfoWindow(marker, content, cafeteria) {
-
+    /*
     let infoWindow = new google.maps.InfoWindow({
       content: content
     });
-
+    */
     google.maps.event.addListener(marker, 'click', () => {
       this.coffeeStore = cafeteria;
 
@@ -127,9 +127,23 @@ export class HomePage implements OnInit {
   }
 
   onSearchFocus(bool) {
-    //this.navCtrl.parent.select(1);
-    this.displayFooter = false;
-    this.hideMap(bool)
+    //this.displayFooter = false;
+    //this.hideMap(bool)
+  }
+
+  onSearchInput(ev) {
+    let val = ev.target.value;
+
+    if (val && val.trim() != '') {
+      this.displayFooter = false;
+      this.hideMap(true);
+      this.cafeterias = this.cafeterias.filter((item) => {
+        return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    } else {
+      this.hideMap(false);
+      this.cafeterias = this.cafeteriasService.cafeterias;
+    }
   }
 
 }

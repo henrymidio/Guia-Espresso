@@ -28,8 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp, {
-      tabsHideOnSubPages: true,
-      mode: 'md'
+      tabsHideOnSubPages: true
     })
   ],
   bootstrap: [IonicApp],

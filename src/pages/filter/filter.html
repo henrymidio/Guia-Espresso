@@ -11,10 +11,10 @@
     <ion-title mode="ios">Filtro</ion-title>
 
     <ion-buttons right>
-        <button ion-button icon-only class="my-style-for-modal">
-          <ion-icon name="md-checkmark"></ion-icon>
-        </button>
-      </ion-buttons>
+      <button ion-button icon-only class="my-style-for-modal" (click)="viewCtrl.dismiss()">
+        <ion-icon name="md-checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
 
   </ion-navbar>
 
@@ -26,7 +26,7 @@
   <div class="range" padding-top>
     <ion-list no-border no-lines>
       <ion-list-header no-border no-lines>
-          <h2 padding-right style="font-weight: 900">Distância</h2>
+        <h2 padding-right padding-left style="font-weight: 900">Distância</h2>
         <ion-badge item-end>{{singleValue}} km</ion-badge>
       </ion-list-header>
       <ion-item>
@@ -41,23 +41,8 @@
   <div class="oferecimento">
     <h2 padding-left padding-right>Espaço</h2>
     <div class="chips" padding>
-      <ion-chip>
-        <ion-label>Wifi</ion-label>
-      </ion-chip>
-      <ion-chip>
-        <ion-label>Pet friendly</ion-label>
-      </ion-chip>
-      <ion-chip>
-        <ion-label>Terraço</ion-label>
-      </ion-chip>
-      <ion-chip>
-        <ion-label>Álcool</ion-label>
-      </ion-chip>
-      <ion-chip>
-        <ion-label>Kids</ion-label>
-      </ion-chip>
-      <ion-chip>
-        <ion-label>Cursos</ion-label>
+      <ion-chip [class.option-chip-disabled]="!option.active" [class.option-chip-active]="option.active" *ngFor="let option of options" on-tap="toggleOptionState(option)">
+        <ion-label>{{ option.name }}</ion-label>
       </ion-chip>
     </div>
 
@@ -73,6 +58,11 @@
           <ion-label mode="md">Rio de Janeiro</ion-label>
           <ion-checkbox mode="md" [(ngModel)]="sausage"></ion-checkbox>
         </ion-item>
+
+        <ion-item mode="md">
+            <ion-label mode="md">Curitiba</ion-label>
+            <ion-checkbox mode="md" [(ngModel)]="sausage"></ion-checkbox>
+          </ion-item>
 
       </ion-list>
     </div>

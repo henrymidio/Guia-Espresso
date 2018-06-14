@@ -13,10 +13,10 @@ page-cafeteria {
         border-radius: 5px;
         top: 0;
         right: 0;
-        bottom: 75%;
+        bottom: 55%;
         left: 0;
         background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0, black 100%);
-        opacity: .6; 
+        opacity: .8; 
     }
 
     
@@ -44,14 +44,11 @@ page-cafeteria {
         color: rgba(52, 52, 52, 0.7)
     }
 
-    .oferecimento {
+    .oferecimento, .descricao {
         border-bottom: 1px solid #ddd;
         //padding-bottom: 0 !important;
     }
 
-    .descricao {
-        padding-bottom: 0 !important;
-    }
 
     .oferecimento ion-icon {
         font-size: 2.2em;
