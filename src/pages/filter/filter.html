@@ -8,11 +8,11 @@
       </button>
     </ion-buttons>
 
-    <ion-title mode="ios">Filtro</ion-title>
+    <ion-title mode="ios">Tags</ion-title>
 
     <ion-buttons right>
-      <button ion-button icon-only class="my-style-for-modal" (click)="viewCtrl.dismiss()">
-        <ion-icon name="md-checkmark"></ion-icon>
+      <button ion-button class="my-style-for-modal" (click)="viewCtrl.dismiss()">
+        Filtrar
       </button>
     </ion-buttons>
 
@@ -22,8 +22,7 @@
 
 
 <ion-content>
-
-  <div class="range" padding-top>
+  <!--
     <ion-list no-border no-lines>
       <ion-list-header no-border no-lines>
         <h2 padding-right padding-left style="font-weight: 900">Distância</h2>
@@ -45,24 +44,50 @@
         <ion-label>{{ option.name }}</ion-label>
       </ion-chip>
     </div>
+-->
 
+  <div class="range" padding-top>
     <div class="cidades">
-      <h2 padding-left padding-right>Região</h2>
       <ion-list mode="md">
         <ion-item mode="md">
-          <ion-label mode="md">São Paulo</ion-label>
-          <ion-checkbox mode="md" [(ngModel)]="pepperoni"></ion-checkbox>
+          <ion-label mode="md">Free Wifi</ion-label>
+          <ion-checkbox mode="md" [(ngModel)]="wifi"></ion-checkbox>
         </ion-item>
 
         <ion-item mode="md">
-          <ion-label mode="md">Rio de Janeiro</ion-label>
-          <ion-checkbox mode="md" [(ngModel)]="sausage"></ion-checkbox>
+          <ion-label mode="md">Vegan Friendly</ion-label>
+          <ion-checkbox mode="md" [(ngModel)]="vegan"></ion-checkbox>
         </ion-item>
 
         <ion-item mode="md">
-            <ion-label mode="md">Curitiba</ion-label>
-            <ion-checkbox mode="md" [(ngModel)]="sausage"></ion-checkbox>
-          </ion-item>
+          <ion-label mode="md">Opções sem glúten</ion-label>
+          <ion-checkbox mode="md" [(ngModel)]="gluten"></ion-checkbox>
+        </ion-item>
+
+        <ion-item mode="md">
+          <ion-label mode="md">Pet friendly</ion-label>
+          <ion-checkbox mode="md" [(ngModel)]="pet"></ion-checkbox>
+        </ion-item>
+
+        <ion-item mode="md">
+          <ion-label mode="md">Terraço</ion-label>
+          <ion-checkbox mode="md" [(ngModel)]="terraco"></ion-checkbox>
+        </ion-item>
+
+        <ion-item mode="md">
+          <ion-label mode="md">Co-working</ion-label>
+          <ion-checkbox mode="md" [(ngModel)]="coworking"></ion-checkbox>
+        </ion-item>
+
+        <ion-item mode="md">
+          <ion-label mode="md">Espaço kids</ion-label>
+          <ion-checkbox mode="md" [(ngModel)]="kids"></ion-checkbox>
+        </ion-item>
+
+        <ion-item mode="md">
+          <ion-label mode="md">Cursos</ion-label>
+          <ion-checkbox mode="md" [(ngModel)]="cursos"></ion-checkbox>
+        </ion-item>
 
       </ion-list>
     </div>

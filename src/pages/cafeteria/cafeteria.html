@@ -1,30 +1,27 @@
-
-
-
 <ion-content style="height: 100vh">
 
-    <button ion-fixed class="botao-flutuante" ion-button icon-only clear color="light" (click)="voltarPagina()">
-        <ion-icon name="md-arrow-back"></ion-icon>
-      </button>
+  <button ion-fixed class="botao-flutuante" ion-button icon-only clear color="light" (click)="voltarPagina()">
+    <ion-icon name="md-arrow-back"></ion-icon>
+  </button>
 
-    <div ion-fixed class="cafeteria-capa over-shadow" [ngStyle]="{'background-image': 'url(' + cafeteria.cover + ')'}">
-    </div>
-      
-    <div class="conteudo">
-      <div class="principal" padding>
-        <h1>{{ cafeteria.name }}</h1>
-        <div class="avaliacao">
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          (0)
-        </div>
-        <p>{{ cafeteria.street }}, {{ cafeteria.num }} - {{ cafeteria.bairro }}</p>
+  <div ion-fixed class="cafeteria-capa over-shadow" [ngStyle]="{'background-image': 'url(' + cafeteria.cover + ')'}">
+  </div>
+
+  <div class="conteudo">
+    <div class="principal" padding>
+      <h1>{{ cafeteria.name }}</h1>
+      <div class="avaliacao">
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        (0)
       </div>
-  
-      <div class="oferecimento" padding>
+      <p>{{ cafeteria.street }}, {{ cafeteria.num }} - {{ cafeteria.bairro }}</p>
+    </div>
+    <!--
+    <div class="oferecimento" padding>
         <h1>Espaço</h1>
         <div padding-top>
           <ion-icon name="wifi"></ion-icon>
@@ -34,69 +31,69 @@
           <ion-icon name="paw"></ion-icon>
         </div>
       </div>
-  
-      <div class="descricao" padding>
-        <p>{{ cafeteria.description }}</p>
-      </div>
-
-      <div class="contato" padding-left padding-right>
-        <h1>Contato</h1>
-        <ion-list no-lines no-border>
-          <ion-item style="padding-left: 0px">
-            <ion-avatar item-start>
-              <img src="http://download.seaicons.com/download/i78241/igh0zt/ios7-style-metro-ui/igh0zt-ios7-style-metro-ui-metroui-other-phone-alt.ico">
-            </ion-avatar>
-            <h2>(99) 9999-9999</h2>
-          </ion-item>
-        </ion-list>
-      </div>
-  
-      <div class="comentarios">
-        <h1 padding-left padding-right padding-top>Avaliações</h1>
-        <ion-slides pager="true">
-          <ion-slide>
-            <ion-card>
-              <ion-item>
-                <ion-avatar item-start>
-                  <img src="https://ionicframework.com/dist/preview-app/www/assets/img/marty-avatar.png">
-                </ion-avatar>
-                <h2>Marty McFly</h2>
-                <div class="avaliacao">
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                </div>
-              </ion-item>
-              <ion-card-content>
-                <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                  Whoa. This is heavy.</p>
-              </ion-card-content>
-            </ion-card>
-          </ion-slide>
-          <ion-slide>
-              <ion-card>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/marty-avatar.png">
-                  </ion-avatar>
-                  <h2>Marty McFly</h2>
-                  <div class="avaliacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                  </div>
-                </ion-item>
-                <ion-card-content>
-                  <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                    Whoa. This is heavy.</p>
-                </ion-card-content>
-              </ion-card>
-            </ion-slide>
-        </ion-slides>
-      </div>
+  -->
+    <div class="descricao" padding>
+      <p>{{ cafeteria.description }}</p>
     </div>
-  </ion-content>
+
+    <div class="contato" padding-left padding-right>
+      <h1>Contato</h1>
+      <ion-list no-lines no-border>
+        <ion-item style="padding-left: 0px">
+          <ion-avatar item-start>
+            <img src="http://download.seaicons.com/download/i78241/igh0zt/ios7-style-metro-ui/igh0zt-ios7-style-metro-ui-metroui-other-phone-alt.ico">
+          </ion-avatar>
+          <h2>(99) 9999-9999</h2>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div class="comentarios">
+      <h1 padding-left padding-right padding-top>Avaliações</h1>
+      <ion-slides pager="true">
+        <ion-slide>
+          <ion-card>
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="https://ionicframework.com/dist/preview-app/www/assets/img/marty-avatar.png">
+              </ion-avatar>
+              <h2>Marty McFly</h2>
+              <div class="avaliacao">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+            </ion-item>
+            <ion-card-content>
+              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
+                Whoa. This is heavy.</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="https://ionicframework.com/dist/preview-app/www/assets/img/marty-avatar.png">
+              </ion-avatar>
+              <h2>Marty McFly</h2>
+              <div class="avaliacao">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+            </ion-item>
+            <ion-card-content>
+              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
+                Whoa. This is heavy.</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+</ion-content>

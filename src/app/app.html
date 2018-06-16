@@ -1,1 +1,40 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content" id="menu1">
+
+    <ion-header color="primary">
+        <ion-toolbar color="primary">
+            <ion-title>Fale Conosco</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-list no-lines no-border>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="http://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/whatsapp-icon.png">
+                </ion-avatar>
+                <h2>(99) 9999-9999</h2>
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="https://hoganchua-hudbhi7gzmvkzpctzr6hwgk2lbnfnkerebgcjs6k8yq.netdna-ssl.com/wp-content/uploads/2016/05/Instagram2016_col-128px.png">
+                </ion-avatar>
+                <h2>@coffeematch</h2>
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="https://www.shareicon.net/data/256x256/2015/08/29/92757_like_606x606.png">
+                </ion-avatar>
+                <h2>@coffeematch</h2>
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="https://cdn.icon-icons.com/icons2/72/PNG/256/email_14410.png">
+                </ion-avatar>
+                <h2>nicolasromano@thecoffeematch.com</h2>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content></ion-nav>

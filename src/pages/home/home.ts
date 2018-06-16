@@ -86,32 +86,28 @@ export class HomePage implements OnInit {
 
   addMarker(latLng, cafeteria) {
 
+    let content = "<h5>" + cafeteria.name  + "</h5>";
+
+    let infoWindow = new google.maps.InfoWindow({
+      content: content
+    });
+
     let marker = new google.maps.Marker({
       map: this.map,
       animation: google.maps.Animation.DROP,
       position: latLng
     });
 
-    let content = "<h4>Information!</h4>";
-
-    this.addInfoWindow(marker, content, cafeteria);
-
-  }
-
-  addInfoWindow(marker, content, cafeteria) {
-    /*
-    let infoWindow = new google.maps.InfoWindow({
-      content: content
-    });
-    */
     google.maps.event.addListener(marker, 'click', () => {
       this.coffeeStore = cafeteria;
+      infoWindow.open(this.map, marker);
 
       //Exibe o box da cafeteria
       this.zone.run(() => { this.displayFooter = true; })
     });
 
   }
+
 
   presentModalFilter() {
     const modal = this.modalCtrl.create('FilterPage');
@@ -126,12 +122,8 @@ export class HomePage implements OnInit {
     this.displayFooter = false;
   }
 
-  onSearchFocus(bool) {
-    //this.displayFooter = false;
-    //this.hideMap(bool)
-  }
-
   onSearchInput(ev) {
+    this.displayFooter = false;
     let val = ev.target.value;
 
     if (val && val.trim() != '') {
