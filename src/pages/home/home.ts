@@ -2,6 +2,7 @@ import { Cafeteria } from './../../models/cafeteria';
 import { CafeteriasProvider } from './../../providers/cafeterias/cafeterias';
 import { Component, ElementRef, ViewChild, OnInit, NgZone } from '@angular/core';
 import { NavController, ModalController, NavParams } from 'ionic-angular';
+import { Geolocation } from '@ionic-native/geolocation';
 
 declare var google;
 
@@ -26,13 +27,18 @@ export class HomePage implements OnInit {
     public modalCtrl: ModalController,
     public navParams: NavParams,
     public zone: NgZone,
-    private cafeteriasService: CafeteriasProvider
+    private cafeteriasService: CafeteriasProvider,
+    private geolocation: Geolocation
   ) {
 
   }
 
   ngOnInit(): void {
-    this.loadMap();
+    this.geolocation.getCurrentPosition().then((resp) => {
+      this.loadMap(resp.coords)
+     }).catch((error) => {
+       this.loadMap({ latitude: -23.549865, longitude: -46.6362092 })
+     });
   }
 
   hideMap(bool) {
@@ -68,13 +74,13 @@ export class HomePage implements OnInit {
     this.displayFooter = true;
   }
 
-  loadMap() {
+  loadMap(coords) {
 
-    let latLng = new google.maps.LatLng(-23.549865, -46.6362092);
+    let latLng = new google.maps.LatLng(coords.latitude, coords.longitude);
 
     let mapOptions = {
       center: latLng,
-      zoom: 12,
+      zoom: 14,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       disableDefaultUI: true
     }

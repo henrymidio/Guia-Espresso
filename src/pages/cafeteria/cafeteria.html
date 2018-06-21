@@ -1,4 +1,4 @@
-<ion-content style="height: 100vh">
+<ion-content style="height: 100vh" (ionScroll)="onScroll($event)">
 
   <button ion-fixed class="botao-flutuante" ion-button icon-only clear color="light" (click)="voltarPagina()">
     <ion-icon name="md-arrow-back"></ion-icon>
@@ -20,18 +20,15 @@
       </div>
       <p>{{ cafeteria.street }}, {{ cafeteria.num }} - {{ cafeteria.bairro }}</p>
     </div>
-    <!--
+    
     <div class="oferecimento" padding>
         <h1>Espaço</h1>
         <div padding-top>
           <ion-icon name="wifi"></ion-icon>
           <ion-icon name="cafe"></ion-icon>
-          <ion-icon name="bicycle"></ion-icon>
-          <ion-icon name="car"></ion-icon>
-          <ion-icon name="paw"></ion-icon>
         </div>
       </div>
-  -->
+
     <div class="descricao" padding>
       <p>{{ cafeteria.description }}</p>
     </div>
@@ -41,15 +38,20 @@
       <ion-list no-lines no-border>
         <ion-item style="padding-left: 0px">
           <ion-avatar item-start>
-            <img src="http://download.seaicons.com/download/i78241/igh0zt/ios7-style-metro-ui/igh0zt-ios7-style-metro-ui-metroui-other-phone-alt.ico">
+            <img src="assets/imgs/ic_phone.png">
           </ion-avatar>
-          <h2>(99) 9999-9999</h2>
+          <h2>{{ cafeteria.tel }}</h2>
         </ion-item>
       </ion-list>
     </div>
 
-    <div class="comentarios">
+    <div class="comentarios" magin-bottom padding-bottom>
       <h1 padding-left padding-right padding-top>Avaliações</h1>
+      <div text-center margin>
+        <img class="no-comments" src="assets/imgs/no-comments.gif" />
+        <p style="color: grey">Nenhum comentário adicionado</p>
+      </div>
+      <!--
       <ion-slides pager="true">
         <ion-slide>
           <ion-card>
@@ -94,6 +96,7 @@
           </ion-card>
         </ion-slide>
       </ion-slides>
+    -->
     </div>
   </div>
 </ion-content>

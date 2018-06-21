@@ -5,6 +5,7 @@ page-cafeteria {
         width: 100%;
         background-size: cover;
         z-index: 1;
+        //transition: height 0.5s, z-index 1s;
     }
 
     .over-shadow:before {
@@ -19,7 +20,18 @@ page-cafeteria {
         opacity: .8; 
     }
 
-    
+    .over-shadow-two:before {
+        content: "";
+        position: absolute;
+        width : 100%;
+        height: 100%;
+        background: inherit;
+
+        filter        : blur(5px);
+
+        transition        : all 0.2s linear;
+    }
+
     .conteudo {
         //height: 100vh;
         margin-top: 40vh !important;
@@ -49,7 +61,6 @@ page-cafeteria {
         //padding-bottom: 0 !important;
     }
 
-
     .oferecimento ion-icon {
         font-size: 2.2em;
         border: 1px solid #ccc;
@@ -61,6 +72,12 @@ page-cafeteria {
 
     .comentarios {
         background-color: #F5F6FA;
+    }
+
+    .no-comments {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
     }
 
     .card-ios, .card-md {

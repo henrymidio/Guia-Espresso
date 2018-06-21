@@ -1,6 +1,6 @@
-import { ComponentsModule } from './../components/components.module';
 import { FavoritosPage } from './../pages/favoritos/favoritos';
-
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { Geolocation } from '@ionic-native/geolocation';
 
 import { ListaCafeteriasPage } from './../pages/lista-cafeterias/lista-cafeterias';
 import { TabsPage } from './../pages/tabs/tabs';
@@ -41,6 +41,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     StatusBar,
+    InAppBrowser,
+    Geolocation,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ApiProvider,
